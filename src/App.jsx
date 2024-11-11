@@ -5,10 +5,11 @@ import Programs from './Components/programs/Programs'
 import Title from './Components/title/Title'
 import About from './Components/about/About'
 import Campus from './Components/campus/Campus'
-import Testimonials from './Components/testimonials/Testimonials'
 import Contact from './Components/contact/contact'
 import Footer from './Components/footer/Footer'
 import Videoplayer from './Components/videoPlayer/Videoplayer'
+import Project from './Components/project/Project'
+import Intro from './Components/intro/Intro'
 
 const App = () => {
   const [playState, setPlayState] = useState(false)
@@ -17,13 +18,12 @@ const App = () => {
       <Navbar /> 
       <Hero /> 
       <div className='container'>
-        <Title title='What we offer' subTitle='Our progam'/>
-        <Programs />
+        <Intro />
         <About setPlayState={setPlayState} playState={playState}/>
         <Title title='Gallery' subTitle='Campus Photos'/>
         <Campus />
-        <Title title='Testimonials' subTitle='What students say'/>
-        <Testimonials />
+        <Title title='Our Projects' subTitle="What we're involved in"/>
+        <Project />
       </div>
       <Contact />
       <Footer />

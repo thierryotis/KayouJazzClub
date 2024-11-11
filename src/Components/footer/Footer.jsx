@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <div className="footer container">
       <p className="social-media">
-        <FaFacebook size={20} color="#fff" /> {/* Icône Facebook */}
-        <FaTwitter size={20} color="#fff" /> {/* Icône Twitter */}
+        <FaFacebook size={20} color="#fff" /> 
+        <FaTwitter size={20} color="#fff" /> 
       </p>
       <p className="copyright">2024 Kayou. All Rights reserved</p>
       <ul>

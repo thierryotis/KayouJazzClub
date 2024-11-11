@@ -1,0 +1,60 @@
+.intro{
+    margin:50px auto;
+    width: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligner .inside ou .caption en bas */
+    width: 31%;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 20px 0 0 0;
+    position: relative;
+    border-radius: 5% 5% 0 0;
+    background-color: #000;
+    
+}
+
+.box .caption, .box .inside{ 
+    background-color: #fff;
+    color:#000;
+    width: 100%;
+    height: 90%;
+    padding:0px 5px 15px 5px;
+    text-align: center;
+    border-radius: 5% 5% 0 0;
+    
+
+}
+.caption p{color:#000}
+
+.icon-circle {
+    display: inline-flex;
+    padding:15px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000; /* Couleur de fond */
+    border-radius: 50%; /* Cercle */
+    color: #fff; /* Couleur de l'icône */
+    position:relative;
+    top:-60px;
+  }
+
+/* ---------------- media query ------------------*/
+
+@media  (max-width:800px){
+    .intro{
+        flex-direction: column;
+    }
+    .box{
+        flex-basis: 100%;
+        width: 100%;
+        margin:10%;
+    }
+}

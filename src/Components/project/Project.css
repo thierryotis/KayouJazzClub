@@ -1,0 +1,130 @@
+.project{
+    margin:80px auto;
+    padding: 0 80px;
+    position: relative;
+}
+
+.next-btn, .back-btn{
+    padding: 15px;
+    width: 40px;
+    position: absolute;
+    top : 50%; 
+    right : 0; 
+    transform: translateY(-50%);
+    border-radius:50%; 
+    background-color: #f4ab38;
+    cursor:pointer;
+}
+
+.back-btn{
+    right: auto;
+    left: 0;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.slider ul li{
+    list-style-type: none;
+    width:100%;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slide{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding:60px; 
+    border-radius: 10px; 
+    color:#676767;
+    line-height: 1.4;;
+}
+
+.slide img{
+   flex-shrink: 300px; 
+}
+
+.project-info{
+
+    flex-basis: 40%; 
+    order:2;
+}
+
+.project-info img{
+    width: 100%;
+}
+
+.project-desc{
+    flex-basis: 50%; 
+}
+
+.project-desc .btn{
+    margin-top: 10px;
+}
+
+.slide h3{
+    color:#000;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.slide p{
+    margin-bottom: 15px;;
+}
+
+/* ---------------- media query ------------------*/
+@media (max-width:800px){
+    .project{
+        padding: 0 40px;
+        flex-direction: column;
+    }
+    .project .slide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .next-btn, .back-btn{
+        padding: 10px;
+        width: 35px;
+    }
+    .project ul li{
+        padding:10px;
+    }
+    .slide{
+        padding: 10px;
+    }
+    .slide img{
+        width:100%;
+        border:3px solid #f4ab38;
+        margin-top: 10px;
+        order: 1;
+    }
+
+}
+
+@media (max-width:600px){
+    .slider ul li{
+        width: 100%;
+    }
+    .project-info{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .project-info h3{
+        font-size:16px;
+    }
+    .slider p{
+        font-size:12px
+    }
+}

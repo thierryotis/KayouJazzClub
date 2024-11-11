@@ -45,7 +45,6 @@
     padding-top: 0;
 }
 
-
 /* ---------------- media query ------------------*/
 
 @media  (max-width:800px){
@@ -57,3 +56,4 @@
         margin:10%;
     }
 }
+
