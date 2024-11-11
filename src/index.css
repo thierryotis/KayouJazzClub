@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+/* Réinitialisation complète des marges et paddings pour les éléments principaux */
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+  margin:0; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geist", sans-serif;
+}
+
+body{
+  background: #F5F5F5;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+  line-height-step: 1;
+}
+.btn{
+  background: #fff;
+  color:#212121;
+  padding:14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor:pointer;
+  border:0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.btn.dark-btn{
+  background-color: #280d0d;
+  color:#fff;
+}
+
+.btn img{
+  width: 20px;
+  margin-left:10px;
+}
+.container{
+  padding-left: 10%;
+  padding-right: 10%;
+  
+}
+
+
+/* ---------------- media query ------------------*/
+@media (max-width: 1200px){
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn{
+    padding: 14px 22px;
+  }
+}
