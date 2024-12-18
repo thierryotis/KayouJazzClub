@@ -3,13 +3,14 @@ import "./Footer.css";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="footer container">
       <p className="social-media">
-        <FaFacebook size={20} color="#fff" /> 
-        <FaTwitter size={20} color="#fff" /> 
+        <FaFacebook className="icon" size={20} color="#fff" /> 
+        <FaTwitter className="icon" size={20} color="#fff" /> 
       </p>
-      <p className="copyright">2024 Kayou. All Rights reserved</p>
+      <p className="copyright"> {currentYear} Kayou Jazz Club . All Rights Reserved.</p>
       <ul>
         <li>Terms of services</li>
         <li>privacy Policy</li>

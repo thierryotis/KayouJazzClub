@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import "./Project.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
-import user_1 from "../../assets/about.png";
-import user_2 from "../../assets/user-2.png";
+import user_1 from "../../assets/young-learners.jpg";
+import user_2 from "../../assets/roots-music.jpg";
 
 const Project = () => {
   const slider = useRef();
@@ -21,6 +21,7 @@ const Project = () => {
     }
     slider.current.style.transform = `translateX(${tx}%)`;
   };
+
   return (
     <div className="project">
       <img src={next_icon} alt="" className="next-btn" onClick={slideForward} />
@@ -86,6 +87,13 @@ const Project = () => {
           </li>
         </ul>
       </div>
+      {/* <svg width="0" height="0">
+        <defs>
+          <clipPath id="saxophone-mask" clipPathUnits="objectBoundingBox">
+          <path d="M0.5,0 L0.6,0.2 L0.6,0.4 L0.8,0.5 L0.6,0.6 L0.6,0.8 L0.5,1 L0.4,0.8 L0.4,0.6 L0.2,0.5 L0.4,0.4 L0.4,0.2 Z" />
+          </clipPath>
+        </defs>
+      </svg> */}
     </div>
   );
 };

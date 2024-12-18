@@ -18,10 +18,10 @@ const App = () => {
       <Navbar /> 
       <Hero /> 
       <div className='container'>
-        <Intro />
+        {/*<Intro />*/}
         <About setPlayState={setPlayState} playState={playState}/>
-        <Title title='Gallery' subTitle='Campus Photos'/>
-        <Campus />
+        <Title title='Team' subTitle='Join Us'/>
+        <Programs />
         <Title title='Our Projects' subTitle="What we're involved in"/>
         <Project />
       </div>

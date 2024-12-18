@@ -1,13 +1,13 @@
 .programs{
-    margin:80px auto;
-    width: 90%; 
+    margin:50px auto;
+    width: 80%; 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 .program{
-    flex-basis: 31%;
+    flex-basis: 48%;
     position:relative;
 }
 .program img{
@@ -23,7 +23,7 @@
     left:0;
     bottom:0;
     right:0;
-    background: rgba(0,15, 152, 0.3);
+    background: rgba(244,171, 56, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,19 @@
 .program:hover .caption{
     opacity: 1;
     padding-top: 0;
+}
+
+.program p{
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: justify;
+    
+}
+
+.btn.pg{
+    display: block;
+    
+    margin: auto;
 }
 
 /* ---------------- media query ------------------*/

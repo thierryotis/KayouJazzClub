@@ -4,7 +4,7 @@
 }
 
 .contact{
-    margin:10px auto; 
+    margin:0px auto; 
     width: 100%;
     display: flex;
     align-items: center;
@@ -30,6 +30,7 @@
 .contact-col p{
     min-width: 450px;
     list-style: 0.3;
+    font-size: 1.2em;
 }
 
 .contact-col ul li{

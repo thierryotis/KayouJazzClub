@@ -31,7 +31,7 @@ const Navbar = () => {
             <li><Link to='project' smooth={true} offset={-260} duration={500}>Projects</Link></li>
             <li><Link to='about' smooth={true} offset={-150} duration={500}>About Us</Link></li>
             <li><Link to='team' smooth={true} offset={-260} duration={500}>Team</Link></li>
-            <li><Link to='testimonials' smooth={true} offset={-256} duration={500}>Testimonials</Link></li>
+            {/* <li><Link to='testimonials' smooth={true} offset={-256} duration={500}>Testimonials</Link></li> */}
             <li><Link to='contact' smooth={true} offset={0} duration={500} className='btn'>Contact</Link></li>
         </ul>
         <img src={menu_icon} alt="" className='menu_icon' onClick={toggleMenu}/>

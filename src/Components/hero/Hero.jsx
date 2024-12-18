@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import "./Hero.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
-import heroImg from '../../assets/hero.png'
-import heroImg2 from '../../assets/hero-2.png'
-import heroImg3 from '../../assets/hero.png'
+import heroImg from '../../assets/slider1.jpg'
+import heroImg2 from '../../assets/slider2.jpg'
+import heroImg3 from '../../assets/slider3.jpg'
 
 const Hero = () => {
   const slider = useRef();

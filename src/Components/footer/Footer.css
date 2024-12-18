@@ -26,6 +26,9 @@
 .social-media {
   cursor: pointer;
   margin-bottom: 10px;
+  display: flex;            /* Active Flexbox */
+  justify-content: center;  /* Centre horizontalement les icônes */
+  gap: 10px;  
 }
 
 /* ---------------- media query ------------------*/

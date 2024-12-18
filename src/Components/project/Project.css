@@ -1,5 +1,5 @@
 .project{
-    margin:80px auto;
+    margin:0px auto;
     padding: 0 80px;
     position: relative;
 }
@@ -61,6 +61,9 @@
 
 .project-info img{
     width: 100%;
+    clip-path: url(#saxophone-mask); /* Utilisation d'un masque SVG */
+    border: 2px solid #fff; /* Add a white border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }
 
 .project-desc{
@@ -74,11 +77,12 @@
 .slide h3{
     color:#000;
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 
 .slide p{
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
 /* ---------------- media query ------------------*/
