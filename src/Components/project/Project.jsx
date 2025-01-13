@@ -54,7 +54,6 @@ const Project = () => {
                 program has transformed their lives, improved school performance
                 and strengthening social connections.
               </p>
-              <button className="btn dark-btn">Get Involved</button>
             </div>
           </li>
           <li className="slide">
@@ -82,7 +81,6 @@ const Project = () => {
                 preserving and evolving African music, Kayou Jazz Club empowers
                 future generations.
               </p>
-              <button className="btn dark-btn">Get Involved</button>
             </div>
           </li>
         </ul>
