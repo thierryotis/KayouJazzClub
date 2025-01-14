@@ -59,13 +59,75 @@
 
 /* ---------------- media query ------------------*/
 
+@media  (max-width:1000px){
+    
+    .programs{
+        margin: 0px auto 30px;
+        width: 100%; 
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+    }
+    .program{
+        flex-basis: 48%;
+        position:relative;
+    }
+    .program img{
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    .caption{
+        border-radius:10px;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background: rgba(244,171, 56, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color:#010101;
+        cursor:pointer;
+        opacity:0;
+        padding-top: 70%;
+        transition: 0.4s;
+    }
+    
+    .caption img{
+        width:60px;
+        margin-bottom:10px;
+    }
+    
+    .program:hover .caption{
+        opacity: 1;
+        padding-top: 0;
+    }
+    
+    .program p{
+        padding: 10px;
+        font-size: 1.2em;
+        text-align: justify;
+        
+    }
+    
+    .btn.pg{
+        display: block;
+        margin: auto;
+    }
+    
+}
 @media  (max-width:800px){
     .programs{
         flex-direction: column;
     }
     .program{
         flex-basis: 100%;
-        margin:10%;
+        margin:2%;
     }
 }
 

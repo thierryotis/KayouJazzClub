@@ -88,16 +88,17 @@
 
 /* ---------------- media query ------------------*/
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .project {
-    padding: 0 40px;
+    padding: 0 20px;
+    position: relative;
     flex-direction: column;
   }
+  
   .project .slide {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding:0;
   }
   .next-btn,
   .back-btn {
@@ -107,25 +108,11 @@
   .project ul li {
     padding: 10px;
   }
-  .slide {
-    padding: 10px;
-  }
-  .slide img {
-    width: 100%; /* Ajuster l'image pour prendre toute la largeur */
-    max-height: 200px; /* Limiter la hauteur */
-    object-fit: cover; /* Maintenir les proportions */
-    margin-bottom: 10px;
-  }
-  .project-desc {
-    margin-top: 15px; /* Ajouter de l'espace entre l'image et le texte */
-  }
-
   .slide h3 {
-    font-size: 18px; /* Réduire la taille du titre */
+    font-size: 1.2em; /* Réduire la taille du titre */
   }
-
   .slide p {
-    font-size: 14px; /* Réduire la taille du texte */
+    font-size: 1.1em; /* Réduire la taille du texte */
   }
 }
 
@@ -135,13 +122,12 @@
   }
   .project-info {
     display: block;
-    margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 1.1em;
   }
   .project-info h3 {
-    font-size: 16px;
+    font-size: 1.3em;
   }
   .slider p {
-    font-size: 12px;
+    font-size: 1.1em;
   }
 }

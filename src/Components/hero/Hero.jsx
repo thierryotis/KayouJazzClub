@@ -1,119 +1,68 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
-import next_icon from "../../assets/next-icon.png";
-import back_icon from "../../assets/back-icon.png";
-import heroImg from '../../assets/slider1.jpg';
-import heroImg2 from '../../assets/slider2.jpg';
-import heroImg3 from '../../assets/slider3.jpg';
+import heroImg1 from "../../assets/slider1.jpg";
+import heroImg2 from "../../assets/slider2.jpg";
+import heroImg3 from "../../assets/slider3.jpg";
 
 const Hero = () => {
-  const slider = useRef();
-  const [heroImages] = useState([heroImg, heroImg2, heroImg3]);
+  const slides = [
+    {
+      image: heroImg1,
+      title: "Unlocking potential through the power of Music",
+      description:
+        "At Kayou Jazz Club, every note is a step towards a brighter future—where music shapes minds, builds communities, and celebrates Africa’s rich cultural legacy.",
+    },
+    {
+      image: heroImg2,
+      title: "Empowering the next generation, one note at a time",
+      description:
+        "Through music education and cultural exchange, we inspire children to dream big, build confidence, and create a brighter future for themselves and their communities.",
+    },
+    {
+      image: heroImg3,
+      title: "Bringing African Music to the world stage",
+      description:
+        "By blending Africa’s rich rhythms with global sounds, we celebrate cultural diversity and introduce the world to the soul of African music, one performance at a time.",
+    },
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef(null); // Pour gérer l'intervalle
-  const totalSlides = heroImages.length;
 
-  // Fonction pour avancer au prochain slide
-  const slideForward = () => {
-    const newIndex = (currentIndex + 1) % totalSlides; // Boucle au début si on dépasse la fin
-    setCurrentIndex(newIndex);
-    slider.current.style.transform = `translateX(-${newIndex * 33.33}%)`;
-  };
-
-  // Fonction pour reculer au slide précédent
-  const slideBackward = () => {
-    const newIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Boucle à la fin si on dépasse le début
-    setCurrentIndex(newIndex);
-    slider.current.style.transform = `translateX(-${newIndex * 33.33}%)`;
-  };
-
-  // Mettre en place un intervalle pour avancer automatiquement
+  // Passer au prochain slide automatiquement
   useEffect(() => {
-    const startAutoSlide = () => {
-      intervalRef.current = setInterval(() => {
-        slideForward();
-      }, 3000); // Change tous les 3 secondes
-    };
-
-    startAutoSlide();
-
-    // Nettoyer l'intervalle lorsque le composant est démonté
-    return () => clearInterval(intervalRef.current);
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change toutes les 5 secondes
+    return () => clearInterval(interval); // Nettoyage de l'intervalle
   }, [currentIndex]);
 
-  // Arrêter l'auto-slide temporairement lors d'une interaction utilisateur
-  const handleUserInteraction = (action) => {
-    clearInterval(intervalRef.current); // Arrêter l'intervalle actuel
-    action(); // Exécuter l'action (slideForward ou slideBackward)
-    // Relancer l'auto-slide après une courte pause
-    setTimeout(() => {
-      const startAutoSlide = () => {
-        intervalRef.current = setInterval(() => {
-          slideForward();
-        }, 3000);
-      };
-      startAutoSlide();
-    }, 5000); // Reprendre l'auto-slide après 5 secondes d'inactivité
+  const nextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % slides.length); // Boucle au début
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((currentIndex - 1 + slides.length) % slides.length); // Boucle à la fin
   };
 
   return (
-    <div
-      className="hero container"
-      style={{
-        backgroundImage: `url(${heroImages[currentIndex]})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <img
-        src={next_icon}
-        alt="Next"
-        className="next-btn"
-        onClick={() => handleUserInteraction(slideForward)}
-      />
-      <img
-        src={back_icon}
-        alt="Back"
-        className="back-btn"
-        onClick={() => handleUserInteraction(slideBackward)}
-      />
-      <div className="slider">
-        <ul ref={slider}>
-          <li className="slide">
-            <div className="hero-text">
-              <h1>Unlocking potential through the power of Music</h1>
-              <p>
-                At Kayou Jazz Club, every note is a step towards a brighter
-                future—where music shapes mind, builds communities, and
-                celebrates Africa’s rich cultural legacy.
-              </p>
-              <button className="btn">Learn More</button>
-            </div>
-          </li>
-          <li className="slide">
-            <div className="hero-text">
-              <h1>Empowering the next generation, one note at a time</h1>
-              <p>
-                Through music education and cultural exchange, we inspire
-                children to dream big, build confidence, and create a brighter
-                future for themselves and their communities.
-              </p>
-              <button className="btn">Learn More</button>
-            </div>
-          </li>
-          <li className="slide">
-            <div className="hero-text">
-              <h1>Bringing African Music to the world stage</h1>
-              <p>
-                By blending Africa’s rich rhythms with global sounds, we
-                celebrate cultural diversity and introduce the world to the soul
-                of African music, one performance at a time.
-              </p>
-              <button className="btn">Learn More</button>
-            </div>
-          </li>
-        </ul>
+    <div className="carousel-container">
+      <div className="carousel-slide">
+        <img
+          src={slides[currentIndex].image}
+          alt={`Slide ${currentIndex}`}
+          className="carousel-image"
+        />
+        <div className="carousel-caption">
+          <h2>{slides[currentIndex].title}</h2>
+          <p>{slides[currentIndex].description}</p>
+        </div>
       </div>
+      <button className="carousel-btn prev" onClick={prevSlide}>
+        &#10094; {/* Flèche gauche */}
+      </button>
+      <button className="carousel-btn next" onClick={nextSlide}>
+        &#10095; {/* Flèche droite */}
+      </button>
     </div>
   );
 };
