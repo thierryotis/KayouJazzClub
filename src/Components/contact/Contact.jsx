@@ -68,6 +68,7 @@ const Contact = () => {
             placeholder="Enter your phone number"
             required
           />
+          <label>Your Message</label>
           <textarea
             name="message"
             rows="6"
