@@ -15,6 +15,7 @@
   border-radius: 50%;
   background-color: #f4ab38;
   cursor: pointer;
+  z-index: 100;
 }
 
 .back-btn {
@@ -36,7 +37,7 @@
 .slider ul li {
   list-style-type: none;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +45,7 @@
 
 .slide {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-  padding:20px 40px;
+  padding: 0px 40px;
   border-radius: 10px;
   color: #676767;
   line-height: 1.4;
@@ -57,6 +58,7 @@
 .project-info {
   flex-basis: 40%;
   order: 2;
+  text-align: justify;
 }
 
 .project-info img {
@@ -67,7 +69,8 @@
 }
 
 .project-desc {
-  flex-basis: 50%;
+  flex-basis: 58%;
+  text-align: justify;
 }
 
 .project-desc .btn {
@@ -87,18 +90,29 @@
 }
 
 /* ---------------- media query ------------------*/
-
+@media (max-width: 1200px) {
+  .project {
+    padding: 0 5px;
+    position: relative;
+    flex-direction: column;
+  }
+}
 @media (max-width: 1000px) {
   .project {
     padding: 0 5px;
     position: relative;
     flex-direction: column;
   }
-  
   .project .slide {
     display: flex;
     flex-direction: column;
-    padding:0;
+    padding: 0 10px;
+  }
+
+  .project .slide {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
   }
   .next-btn,
   .back-btn {
@@ -106,7 +120,7 @@
     width: 35px;
   }
   .project ul li {
-    padding: 10px;
+    padding: 0 10px;
   }
   .slide h3 {
     font-size: 1.2em; /* Réduire la taille du titre */
@@ -124,7 +138,7 @@
   .slider ul li {
     list-style-type: none;
     width: 100%;
-    padding: 0px;
+    padding: 0px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -135,6 +149,7 @@
     width: 100%;
   }
   .project-info {
+    max-width: 600px;
     display: block;
     font-size: 1.1em;
   }
@@ -146,13 +161,18 @@
   }
   .slide {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
-    padding: 0px;
+    padding: 30px;
     border-radius: 0px;
     color: #676767;
     line-height: 1.2;
   }
   .project-info img {
     box-shadow: none; /* Add a shadow */
+  }
+  .next-btn,
+  .back-btn {
+    top: 40%;
+    
   }
 }
 
@@ -172,12 +192,16 @@
   }
   .slide {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
-    padding: 0px;
+    padding: 30px;
     border-radius: 0px;
     color: #676767;
     line-height: 1.2;
   }
   .project-info img {
     box-shadow: none; /* Add a shadow */
+  }
+  .next-btn,
+  .back-btn {
+    top: 45%;
   }
 }
