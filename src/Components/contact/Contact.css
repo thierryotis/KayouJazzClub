@@ -1,6 +1,6 @@
 .contact.container{
     width:100%;
-    height: 100vh;
+    height: 70vh;
     background-color: #f4ab38;
 }
 
@@ -37,7 +37,7 @@
 .contact-col ul li{
     display: flex;
     align-items: center;
-    margin:20px 0;
+    margin:10px 0;
 
 }
 
@@ -68,6 +68,7 @@
 @media (max-width: 800px){
     .contact{
         display:block;
+        min-height: 700px;
     }
     .contact-col{
         padding:20px;
@@ -76,10 +77,10 @@
 @media (max-width: 576px){
     .contact{
         display:block;
-        min-height: 725px;;
+        min-height: 750px;;
     }
     .contact-col{
-        padding:20px;
+        padding:15px;
     }
     .contact-col p{
         min-width: 100%;

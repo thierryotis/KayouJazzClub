@@ -75,7 +75,7 @@
 
 /* Media queries pour les petits écrans */
 
-@media (max-width: 1024px) {
+@media (max-width: 1135px) {
   .carousel-container {
     height: 50vh; /* Réduit la hauteur pour les petits écrans */
   }
@@ -88,7 +88,7 @@
     font-size: 1rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .carousel-container {
     height: 50vh; /* Réduit la hauteur pour les petits écrans */
   }
@@ -100,16 +100,18 @@
   .carousel-caption p {
     font-size: 1rem;
   }
+  
   .carousel-caption {
-    position: absolute;
-    bottom:10px;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 100%;
-  }
+  position: absolute;
+  bottom:5%;
+
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+}
 }
 
 
@@ -122,9 +124,9 @@
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    height: 100%; /* Réduit la hauteur pour les petits écrans */
+    height: 60vh; /* Réduit la hauteur pour les petits écrans */
   }
-
+  .carousel-caption{height: 47vh;}
   .carousel-caption h2 {
     font-size: 1.4rem;
   }
@@ -134,18 +136,19 @@
   }
   .carousel-caption {
     position: absolute;
-    bottom:0px;
+    bottom:-50px;
     text-align: center;
     color: white;
     background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 20px;
+    
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 85%;
+    padding-bottom: 20px;
   }
   .carousel-btn {
-    width: 30px; /* Réduit la taille du bouton */
+    width: 30px; 
     height: 30px;
-    font-size: 1.5rem; /* Réduit la taille de l'icône */
+    font-size: 1.2rem; 
   }
   .carousel-slide {
     position: absolute;
