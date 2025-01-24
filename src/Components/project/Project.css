@@ -126,7 +126,7 @@
     font-size: 1.2em; /* Réduire la taille du titre */
   }
   .slide p {
-    font-size: 1.1em; /* Réduire la taille du texte */
+    font-size: 1em; 
   }
   .slide {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
@@ -151,13 +151,13 @@
   .project-info {
     max-width: 600px;
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
   }
   .project-info h3 {
     font-size: 1.3em;
   }
   .slider p {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   .slide {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
@@ -188,7 +188,7 @@
     font-size: 1.3em;
   }
   .slider p {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   .slide {
     box-shadow: 0 0 0px rgba(0, 0, 0, 0.05);
